@@ -3,7 +3,7 @@
 %---------%
 
 PatchA = ^\markup {
-    \translate #'(-5 . 7)
+    \translate #'(-5 . 5)
     \override #'(box-padding . 0.5)
     \box
     \override #'(line-width . 50)
@@ -28,6 +28,20 @@ PatchB = ^\markup {
     "Steinway Grand (Ivory)"
 }
 
+PatchC = ^\markup {
+    \translate #'(-2 . 1.5)
+    \override #'(box-padding . 0.5)
+    \box
+    "Classical Acoustic Guitar (Logic)"
+}
+
+PatchD = ^\markup {
+    \translate #'(-3 . 1.5)
+    \override #'(box-padding . 0.5)
+    \box
+    "Steinway Grand (Ivory)"
+}
+
 %---------------%
 % Line Spanners %
 %---------------%
@@ -39,6 +53,9 @@ PatchB = ^\markup {
 %----------%
 
 subp = _\markup { \dynamic "p" \small \bold \italic "sub." }
+
+pA = _\markup { \translate #'(0 . 2)\dynamic "p" }
+mpA = _\markup { \translate #'(0 . 2)\dynamic "mp" }
 
 %------------%
 % Techniques %

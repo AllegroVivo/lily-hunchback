@@ -14,13 +14,13 @@ KeyboardOneRH = \relative c' {
     r <d f>-- <bf a'>-- <c g'>-- |
     <e c'> <f a> <d f bf d>2 | \break
     
-    << { \voiceOne
+    << {
          b'4\rest <d f> <bf a'> <c g'> |
          b\rest <c e> <a g'> <bf f'> |
          b\rest <d f> <bf a'> <c g'> |
        }
        \\
-       { \voiceTwo
+       {
          s4 <d, f> <bf a'> <c g'> |
          s <c e> <a g'> <bf f'> |
          s <d f> <bf a'> <c g'> |
@@ -29,10 +29,10 @@ KeyboardOneRH = \relative c' {
     \time 2/4
     
     << 
-    { \voiceOne <e' c'> <f a> | } 
+    { <e' c'> <f a> | } 
     \\ 
-    { \voiceTwo <e, c'> <f a> | } 
-    >> \oneVoice 
+    { <e, c'> <f a> | } 
+    >>  
     
     \bar "||" \time 3/4 \break
     <d' d'>2.-> ~ \f | 
@@ -52,39 +52,96 @@ KeyboardOneRH = \relative c' {
     r <f d'>( <d a'>) |
     <g c>2( <e bf'>4) |
     r <d a'>( <a f'>) |
-    << { \voiceOne bf'2. } \\ { \voiceTwo df,4( f df) } >> \oneVoice \break
+    
+    << { bf'2. } \\ { df,4( f df) } >>  \break
+    
     r4 <c a'>( <a f'>)
     
     << 
-        { \voiceOne <e' a>2 <e g>4 | b'4\rest a2 ~ | a2. | }
+        { <e' a>2 <e g>4 | b'4\rest a2 ~ | a2. | }
         \\
-        { \voiceTwo r4 bf,2 | s4 f'( e | ef2.) }
+        { r4 bf,2 | s4 f'( e | ef2.) }
     >>
+    
     <g, bf d>2. |
     <a c e> | \break
     r4 <a f'> <e a> |
     r <f d'> <a f'> |
+    
     <<
-        { \voiceOne 
-          \once \override Arpeggio.positions = #'(-1.5 . 7.5)
+        {
           <bf'' d g bf>2. \arpeggio \subp |
-          \once \override Arpeggio.positions = #'(-2.5 . 7.25)
           <c e g c> \arpeggio |
-          <a d e a> |
+          <a d e a> \arpeggio |
         }
         \\
-        { \voiceTwo
-          <g, bf d g>2. |
-          <e g c e> |
-          \once \override Arpeggio.positions = #'(-1.5 . 7.5)
+        { 
+          <g, bf d g>2. \arpeggio |
+          <e g c e> \arpeggio |
           <a d e> \arpeggio |
         }
     >>
+    
     <a, cs> | \break
+    \once \override DynamicText.extra-offset = #'(0 . -2.5)
     r4 \mp <f' d'>( <d a'>) |
     <e c'>2( <c bf'>4) |
     r4 <c a'>( <a f>) |
     <df f bf>2. |
+    \override DynamicLineSpanner.staff-padding = #'4.5
+    <a f'>4^( <f d'> \cresc <a f'>) |
+    <d a'>^( <a f'> <d a'>) | \break
+    <f cs'>^( <cs a'> <f cs'>) |
+    <a f'>( <f d'> <a f'>) \! |
+    \once \override DynamicText.extra-offset = #'(0 . -1)
+    <f, c' d>2. \mf |
+    <a c a'> |
+    <g c g'> |
+    <e c' e> | \break
+    \override DynamicLineSpanner.staff-padding = #'3.5
+    s4. s \dim |
+    
+    <<
+        {
+          <d'' a' d>2. \arpeggio |
+          <g c g'> \arpeggio |
+          <c g' c> \arpeggio |
+        }
+        \\
+        {
+          <d,, a'>2. \arpeggio |
+          <g c> \arpeggio |
+          <c g'> \arpeggio |
+        }
+    >>  \bar "||" \break
+    
+    \once \override DynamicText.extra-offset = #'(0 . 1.5) 
+    s2. \PatchC \mp |
+    \repeat unfold 3 { s } | \break
+    \repeat unfold 4 { s } | \break
+    \repeat unfold 4 { s } | \break
+    \repeat unfold 4 { s } | \break
+    <g, bs>2. |
+    <a c> |
+    R2. |
+    a4^( e' f) | \break
+    <g, bf>2. |
+    <a c> |
+    <g a> ~ |
+    q | \bar "||" \break
+    \once \override DynamicText.extra-offset = #'(0 . 0)
+    R2. \p |
+    \repeat unfold 3 { R } | \break
+    c2. ~ |
+    c |
+    <g d'> ~ |
+    q | \break
+    R2. * 4 | \break
+    R2. * 8 | \break
+    \once \override DynamicText.extra-offset = #'(0 . 0)
+    s2. \PatchD \p
+    \repeat unfold 3 { s } | \break
+    R2. * 4 | \bar "||" \break
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,7 +150,7 @@ KeyboardOneLH = \relative c {
     \number-two-setup
     \clef bass
     
-    << { \voiceOne
+    << {
          <a d>1-> | 
          q-> |
          q-> ~ | 
@@ -104,7 +161,7 @@ KeyboardOneLH = \relative c {
          a2
        }
        \\
-       { \voiceTwo
+       {
          <d,, a' d>1-> | 
          q-> | 
          q-> ~ | 
@@ -113,7 +170,7 @@ KeyboardOneLH = \relative c {
          q-> | 
          q-> ~ | 
          q2
-    } >> \oneVoice
+    } >> 
     
     \repeat unfold 2 { d'''2.( | a) | b( | cs) | }
     d,,2 r4 |
@@ -121,7 +178,9 @@ KeyboardOneLH = \relative c {
     f2 r4 |
     df'2 r4 |
     c2 r4 |
-    << { \voiceOne r4 g'2 } \\ { \voiceTwo a,2. }>> \oneVoice
+    
+    << { r4 g'2 } \\ { a,2. }>> 
+    
     d2 r4 |
     a2 r4 |
     d,2 r4 |
@@ -132,10 +191,10 @@ KeyboardOneLH = \relative c {
     c,2 r4 |
     
     << 
-        { \voiceOne s2. | a'' | } 
+        { s2. | a'' | } 
         \\ 
-        { \voiceTwo \stemUp f,2. ~ \stemDown | f | } 
-    >> \oneVoice
+        { \stemUp f,2. ~ \stemDown | f | } 
+    >> 
     
     g2. |
     a |
@@ -144,20 +203,109 @@ KeyboardOneLH = \relative c {
     s2. |
     s |
     s |
-    <a e'>
+    <a e'> |
+    d,2 r4 |
+    e2 r4 |
+    f2 r4 |
+    df'2. |
+    
+    <<
+        {
+          d4\rest d\rest a |
+          f'2( a,4) |
+          e'2( a,4) |
+          d2. |
+        }
+        \\
+        {
+          d,2. ~ |
+          d ~ |
+          d ~ |
+          d2 d4 |
+        }
+    >>
+    
+    <g, d' g>2. |
+    <bf f' bf> |
+    <c g' c> |
+    <a e a'> |
+    <<
+        { <d' a' d>2. ~ | q ~ | q ~ | q | }
+        \\
+        { <d,, a' d> ~ | q ~ | q ~ | q | } 
+    >>
+    
+    <<
+        {
+          <f'' a d>2. \arpeggio |
+          <g c e> \arpeggio |
+          <a d f> \arpeggio |
+          <bf df f> \arpeggio |
+          <a c f> \arpeggio |
+          <cs f> \arpeggio |
+          <a d? f> ~ \arpeggio |
+          q |
+          <f a d> \arpeggio |
+          <c g' c> \arpeggio |
+          <c a' c> \arpeggio |
+          <f bf df> \arpeggio |
+          <f a c> \arpeggio |
+          <e g c> \arpeggio |
+          <a _~ df>( \arpeggio |
+          <a c>) |
+        }
+        \\
+        {
+          d,2. \arpeggio | 
+          e \arpeggio | 
+          d \arpeggio | 
+          df \arpeggio |
+          c \arpeggio | 
+          <a g'> \arpeggio | 
+          d? ~ \arpeggio | 
+          d |
+          d \arpeggio |
+          e, \arpeggio |
+          f \arpeggio |
+          bf \arpeggio |
+          c \arpeggio |
+          c \arpeggio |
+          <f, ~ df'> \arpeggio |
+          <f c'>
+        }
+    >>
+    <g d'> |
+    <a e'> |
+    d,4 ~ <d a'> ~ <d a' e'> ~ |
+    q2. |
+    <g d'> |
+    <a e'> |
+    << { d | cs |} \\ { e, ~ | e | } >> |
+    <d' g a d>2. ~ |
+    q ~ |
+    q ~ |
+    q |
+    <g, c f> ~ |
+    q ~ |
+    q ~ |
+    q | 
+    R2. * 4 |
+    R2. * 8 |
+    << { <d' e>2. ~ | q ~ | q ~ | q | } \\ { <d,, d'> ~ | q ~ | q ~ | q | } >>
+    R2. * 4 | \bar "||"
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 KeyboardOneNumberTwo = \new PianoStaff <<
-    \new Staff = "rh" {
+    \new Staff = "rh" \with { \consists "Span_arpeggio_engraver" } {
         \KeyboardOneRH
     }
-    \new Staff = "lh" {
+    \new Staff = "lh" \with { \consists "Span_arpeggio_engraver" } {
         \KeyboardOneLH
     }
 >>
 
-\score {
-    \KeyboardOneNumberTwo
-}
+% \score {
+%     \KeyboardOneNumberTwo
+% }
