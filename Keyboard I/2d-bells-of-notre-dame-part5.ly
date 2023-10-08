@@ -38,14 +38,14 @@ KeyboardOneRH = \relative c' {
     \bar ".|:-|"
     \repeat volta 2 {
         R2
-  } \time 4/4
-  <a c>8( \mpDlg <b d>) q( <a c>) q( <c e>) q( <b d>) | \time 2/4
-  q([ <g b>)] q( <a c>) | \time 4/4 \break
-  <a c>1 ~ | \bar ".|:"
-  q4 \PlayFirstX r r2 | \bar ":|."
-  <f a>8^( <g b>) q^( <f a>) q^( <a c>) q^( <g b>) | \time 2/4
-  q^( <e g>) q^( <f a>) |
-  \once\override Staff.TimeSignature.space-alist.first-note = #'(fixed-space . -3)
+    } \time 4/4
+    <a c>8( \mpDlg <b d>) q( <a c>) q( <c e>) q( <b d>) | \time 2/4
+    q([ <g b>)] q( <a c>) | \time 4/4 \break
+    <a c>1 ~ | \bar ".|:"
+    q4 \PlayFirstX r r2 | \bar ":|."
+    <f a>8^( <g b>) q^( <f a>) q^( <a c>) q^( <g b>) | \time 2/4
+    q^( <e g>) q^( <f a>) |
+    \once\override Staff.TimeSignature.space-alist.first-note = #'(fixed-space . -3)
     \time 4/4
     \grace s1
     \bar ".|:-|"
@@ -68,33 +68,33 @@ KeyboardOneRH = \relative c' {
     f,,,8-> r  r4 r2 | \ottava #1
     f''8-. ef'-. c-. f-. bf,-. ef-. c-. f-. |\ottava #0 \break
     r4 <c,,, f> \< q8-. q-. q-. q-. | 
-    <c' a'! c>4-- \ff <e c' e>-- <d b' d>-- <c a' c>-- |
+    <c' a'! c>4-- \tweak Y-offset #-2 \ff <e c' e>-- <d b' d>-- <c a' c>-- |
     <c a'! c>4-- <e c' e>-- <d b' d>-- <c a' c>-- | \break
-    <d,, d'>2-> \mf q-- |
-    q4-- \tweak Y-offset #-7 \< q-- q-- \! q-- \ff |
-    <d' d'>2-> \fp q-- |
-    q4-- \tweak Y-offset #-3.5  \< q-- q-- \! q-- \ff
-    <d, d'>2-> \tweak extra-offset #'(0 . -0.5) \fp d'-- | \break
+    <d,, d'>2-> \tweak extra-offset #'(-4.5 . 2.5) \mf q-- |
+    q4-- \tweak extra-offset #'(0.5 . -0.5) \< q-- q-- \! q-- \ff |
+    <d' d'>2-> \tweak Y-offset #-6 \fp q-- |
+    q4-- \tweak Y-offset #-3.5  \< q-- q-- \! q-- \tweak Y-offset #-5.5 \ff
+    <d, d'>2-> \tweak extra-offset #'(0 . 0.5) \fp d'-- | \break
     d4-- d-- d-- \tweak Y-offset #-3.5 \< d-- |
-    <d d'>-- q-- q-- \! q-- \ff | \bar "||" \time 3/4 
+    <d d'>-- q-- q-- \! q-- \tweak Y-offset #-5.5 \ff | \bar "||" \time 3/4 
     <f, bf d>8 \f <e a e'> <f bf f'>4. <g d' g>8 | \time 6/4
     <e a e'>2 <d g d'>2. r4 | \time 4/4 \break
-    <bf'' d f> \arpeggio \PatchD \mp <a d a'> \arpeggio 
+    <bf'' d f> \arpeggio \PatchD \tweak X-offset #0 \mp <a d a'> \arpeggio 
     <g c g'> \arpeggio <bf d f> \arpeggio | \time 2/4
     <a c e> \arpeggio <e a c> \arpeggio | \time 3/4
     <d d'>2. \arpeggio | \time 4/4
     R1 | \break
-    <bf' d f>4 \arpeggio \mp <a d a'> \arpeggio 
+    <bf' d f>4 \arpeggio \tweak X-offset #0 \mp <a d a'> \arpeggio 
     <g c g'> \arpeggio <bf d f> \arpeggio | \time 2/4
     <a c e> \arpeggio <e a c> \arpeggio | \time 4/4 \break
     R1 * 3 | \time 2/4
     R2 | \time 4/4
     R1 \fermata | \bar "||" \break
-    r2 \PatchE \mp f4 ~ <f a> |
+    r2 \PatchE \tweak Y-offset #-3 \mp f4 ~ <f a> |
     <e a>2^( <d bf'>) |
     R1 | \time 2/4
     R2 | \time 4/4
-    s1 * 2 \p | \break
+    s1 * 2 \tweak Y-offset #-3 \p | \break
     R1 * 2 |
     s1 | \bar "||" \time 3/4 \break
 }
@@ -172,7 +172,13 @@ KeyboardOneLH = \relative c {
     q-- <d d'>-- <g, g'>-- <a a'>-- |
     
     <<
-        { d2 \AccelPoco  d | d4 d d d | \repeat unfold 2 { d2 <d d'> | q4 q q q | } }
+        { d2 \tweak extra-offset #'(-0.5 . -1) \AccelPoco  d | 
+          d4 d d d | 
+          \repeat unfold 2 { 
+              d2 <d d'> |
+              q4 q q q | 
+          } 
+        }
         \\
         { d,1 ~ | d | d-> ~ | d | d-> ~ | d }
     >>

@@ -74,6 +74,8 @@ number-two-d-setup = {
     \key c \major
     \override DynamicText.extra-offset = #'(0 . -2)
     \override Hairpin.extra-offset = #'(0 . -1.5)
+    \override Score.NonMusicalPaperColumn.line-break-system-details 
+        = #'((alignment-distances . (14)))
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
