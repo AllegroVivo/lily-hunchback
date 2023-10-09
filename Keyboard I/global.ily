@@ -79,3 +79,16 @@ number-two-d-setup = {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+number-two-e-setup = {
+    \global
+    \time 3/4
+    \key f \major
+    \override DynamicText.extra-offset = #'(0 . -3)
+    \override Hairpin.extra-offset = #'(0 . -1.5)
+    \override Score.NonMusicalPaperColumn.line-break-system-details 
+        = #'((alignment-distances . (14)))
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

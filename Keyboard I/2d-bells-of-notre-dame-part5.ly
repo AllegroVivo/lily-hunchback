@@ -10,9 +10,9 @@ KeyboardOneRH = \relative c' {
     \number-two-d-setup
     \override Staff.BarLine.allow-span-bar = ##t
     
-    \repeatBarGroupAlter #"[" #8 #-6 \bar ".|:"
+    \repeatBarGroupAlter #"[" #9 #-7 \bar ".|:"
     <b e>1 \RHFirstX \PatchA |
-    \bar ":|." \repeatBarGroupAlter #"]" #8 #-6
+    \bar ":|." \repeatBarGroupAlter #"]" #9 #-7
     e''8( c b g e c b g) |
     <a, e'>1 |
     e''8( c b g e c b g) | \break

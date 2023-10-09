@@ -99,7 +99,7 @@ MoltoRitA = ^\markup { \translate #'(-1.5 . 2) \small \bold \italic "molto rit."
 NoAccel = ^\markup { \translate #'(-3 . 2.4) \bold \italic "no accel." }
 AccelPoco = ^\markup { \translate #'(-1.5 . 2) \small \bold \italic "accel. poco a poco" }
 
-RHFirstX = _\markup { \translate #'(0 . -4) \small \italic "r.h. first x only" }
+RHFirstX = _\markup { \translate #'(1 . -4) \small \italic "r.h. first x only" }
 PlayFirstX = ^\markup { \translate #'(-1 . 1) \small \italic "play first x only" }
 
 %-------%
