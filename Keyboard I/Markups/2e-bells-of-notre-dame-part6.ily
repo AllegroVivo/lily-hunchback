@@ -21,6 +21,31 @@ PatchB = ^\markup {
 }
 
 
+PatchC = ^\markup {
+    \translate #'(-4 . 3)
+    \override #'(box-padding . 0.5)
+    \box
+    \override #'(line-width . 40)
+    \wordwrap {
+        \concat {
+            "Steinway Grand (Ivory, "
+            \bold \underline "full range"
+            ") with"
+        }
+        \concat {
+            "MusicBoxII (FM8 custom patch, "
+            \bold \underline "G2 and higher only"
+            ") with"
+        }
+        \concat {
+            "AttaccaEndV (FM8 custom patch, "
+            \bold \underline "G2 and higher only"
+            ")"
+        }
+    }
+}
+
+
 %---------------%
 % Line Spanners %
 %---------------%

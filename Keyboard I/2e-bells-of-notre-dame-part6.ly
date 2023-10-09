@@ -46,7 +46,7 @@ KeyboardOneRH = \relative c'' {
     } \tweak Y-offset #-8 \startTextSpan
     a <d f>[ a]) <c f>->^( <a f'>) | 
     <d f>->^( a <d f>[ a] <d f> a) |
-    <c e>^( g) <e' g>[^( c]) <g' c>^( e) |
+    <c e>^( g) <e' g>[^( c]) <g' c>^( e) \stopTextSpan |
     <g c e g>4-> \f <f a c f>-> <e a c e>-> | \break
     <f c' d>2.-> \mf |
     <a d a'>-> |
@@ -54,7 +54,7 @@ KeyboardOneRH = \relative c'' {
     <c e a c>-> | \bar "||" \time 4/4 \key d \major \break
     <<
         {
-            <d a'>8( \ff <b! fs'!>) <d a'>( <b fs'>) <d a'>( <b g'>) <d a'>( <b g'>) |
+            <d a'>8( \PatchC \tweak Y-offset #-5 \ff <b! fs'!>) <d a'>( <b fs'>) <d a'>( <b g'>) <d a'>( <b g'>) |
             <d a'>( <b g'>) <d a'>( <b g'>) <d a'>( <b g'>) <d a'>( <b fs'>) |
             <d a'>( <b fs'>) <d a'>( <b fs'>) <d a'>( <b g'>) <d a'>( <b g'>) |
             <d a'>( <b g'>) <d a'>( <b g'>) <g' a b d>2-> | \break

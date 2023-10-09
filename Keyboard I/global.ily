@@ -11,7 +11,9 @@ global = {
     \numericTimeSignature
     \override Score.BarLine.break-visibility = #'#(#t #t #t)
     \override Score.NonMusicalPaperColumn.line-break-system-details 
-        = #'((alignment-distances . (12)))
+        = #'((alignment-distances . (14)))
+    \override DynamicText.extra-offset = #'(0 . -3)
+    \override Hairpin.extra-offset = #'(0 . -1.5)
     \override Staff.BarLine.allow-span-bar = ##t
 }
 
@@ -29,8 +31,6 @@ number-two-setup = {
     \global
     \time 4/4
     \key f \major
-    \override DynamicText.extra-offset = #'(0 . -1.5)
-    \override Hairpin.extra-offset = #'(0 . -1.5)
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,8 +39,6 @@ number-two-a-setup = {
     \global
     \time 3/4
     \key f \major
-    \override DynamicText.extra-offset = #'(0 . -1.5)
-    \override Hairpin.extra-offset = #'(0 . -1.5)
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,10 +47,6 @@ number-two-b-setup = {
     \global
     \time 3/4
     \key df \major
-    \override DynamicText.extra-offset = #'(0 . -2)
-    \override Hairpin.extra-offset = #'(0 . -1.5)
-    \override Score.NonMusicalPaperColumn.line-break-system-details 
-        = #'((alignment-distances . (14)))
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,8 +55,6 @@ number-two-c-setup = {
     \global
     \time 3/4
     \key f \major
-    \override DynamicText.extra-offset = #'(0 . -2)
-    \override Hairpin.extra-offset = #'(0 . -1.5)
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,23 +64,31 @@ number-two-d-setup = {
     \defaultTimeSignature
     \time 2/2
     \key c \major
-    \override DynamicText.extra-offset = #'(0 . -2)
-    \override Hairpin.extra-offset = #'(0 . -1.5)
-    \override Score.NonMusicalPaperColumn.line-break-system-details 
-        = #'((alignment-distances . (14)))
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 number-two-e-setup = {
     \global
     \time 3/4
     \key f \major
-    \override DynamicText.extra-offset = #'(0 . -3)
-    \override Hairpin.extra-offset = #'(0 . -1.5)
-    \override Score.NonMusicalPaperColumn.line-break-system-details 
-        = #'((alignment-distances . (14)))
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+number-two-f-setup = {
+    \global
+    \time 4/4
+    \key c \major
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+number-three-setup = {
+    \global
+    \defaultTimeSignature
+    \time 2/2
+    \key a \major
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
