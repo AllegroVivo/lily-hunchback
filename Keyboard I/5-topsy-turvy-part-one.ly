@@ -69,7 +69,13 @@ KeyboardOneRH = \relative c'' {
     s2 * 2 |
     r4 gs'16^( a! as8-.) |
     b!->( fs'-.) bf,->( c-.) | \bar "||" \break
-    
+    r8 \mf <a, d fs>-. \repeat unfold 4 { r q-. } r8 <as d fs>-. |
+    r <b d f>-. <b d fs>-. <b d f>-. | \break
+    \repeat unfold 4 { r8 <a d fs>-. } |
+    r <a e' g>-. r <as e' g>-. |
+    r <as fs'>-. <b g'>-. <as fs'>-. | \break
+    \repeat unfold 5 { r <b e g>-. } r8 <c e g>-. |
+    r <ds fs>-. <e g>-. <ds fs>-. | \break
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
