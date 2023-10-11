@@ -3,14 +3,14 @@
 %---------%
 
 PatchA = ^\markup {
-    \translate #'(0 . 4)
+    \translate #'(-2 . 4)
     \override #'(box-padding . 0.5)
     \box
     "Harp (sample)"
 }
 
 PatchB = ^\markup {
-    \translate #'(-2 . 2)
+    \translate #'(-4 . 2)
     \override #'(box-padding . 0.5)
     \box
     "Steinway Grand (Ivory)"
@@ -20,12 +20,21 @@ PatchB = ^\markup {
 % Line Spanners %
 %---------------%
 
-CrescMolto = {
-    \once \override TextSpanner.staff-padding = #2.5
-    \once \override TextSpanner.bound-details.left.padding = #-3
-    \once \override TextSpanner.bound-details.right.padding = #-4
+CrescPocoA = {
+    \once \override TextSpanner.staff-padding = #5
+    \once \override TextSpanner.bound-details.left.padding = #0
+    \once \override TextSpanner.bound-details.right.padding = #1
     \once \override TextSpanner.bound-details.left.text = \markup {
-        \small \italic "cresc. molto"
+        \small \italic "cresc. poco a poco"
+    }
+}
+
+CrescPocoB = {
+    \once \override TextSpanner.staff-padding = #5
+    \once \override TextSpanner.bound-details.left.padding = #0
+    \once \override TextSpanner.bound-details.right.padding = #-2
+    \once \override TextSpanner.bound-details.left.text = \markup {
+        \small \italic "(cresc. poco a poco)"
     }
 }
 
@@ -33,16 +42,19 @@ CrescMolto = {
 % Dynamics %
 %----------%
 
-mpa = _\markup {
-    \translate #'(0 . -2)
-    \dynamic "mp"
+mpSub = _\markup {
+    \translate #'(-2 . -4.5)
+    \concat {
+        \dynamic "mp"
+        \small \italic " sub."
+    }
 }
 
-fRall = _\markup {
-    \translate #'(0 . -2)
+fRall = ^\markup {
+    \translate #'(-1 . 4)
     \concat {
         \dynamic "f"
-        \bold \italic " rall."
+        \bold \italic "   rall."
     }
 }
 
@@ -50,11 +62,39 @@ fRall = _\markup {
 % Techniques %
 %------------%
 
-ralla = ^\markup {
-    \translate #'(0 . 3)
+PocoRitA = ^\markup {
+    \translate #'(-1 . 4)
+    \bold 
+    \italic 
+    "poco rit."
+}
+
+PocoRallA = ^\markup {
+    \translate #'(0 . 4.5)
+    \bold 
+    \italic 
+    "poco rall."
+}
+
+RallA = ^\markup {
+    \translate #'(2.5 . 4.5)
     \bold 
     \italic 
     "rall."
+}
+
+RallPoco = ^\markup {
+    \translate #'(0 . -2)
+    \bold 
+    \italic 
+    "rall. poco a poco"
+}
+
+MoltoRall = ^\markup {
+    \translate #'(-1 . 4)
+    \bold 
+    \italic 
+    "molto rall."
 }
 
 %-------%
