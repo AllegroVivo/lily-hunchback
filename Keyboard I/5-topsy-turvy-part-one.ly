@@ -9,7 +9,7 @@
 KeyboardOneRH = \relative c'' {
     \number-five-setup
     
-    a16->^( as b!8 ~ \< b2.) |
+    a16->^( \mf as b!8 ~ \< b2.) |
     a'16->( \ff as b8 ~ b) a( b8.) a16( g8-.) e-. | \bar "||" \break
     r4 \mf <d, fs a>4-- <e gs b>2 |
     r4 <d fs a>-- <f a c>2 |
@@ -139,9 +139,23 @@ KeyboardOneRH = \relative c'' {
     <c e a>-. <c e g>-. <c e>-. c-. |
     <c e g>4-- <b ds gs>-- |
     <c e a>8-. <b ds gs>-. <c e a>-. r | \break
-    g'8. \mf a16( b8-. c-. |
+    g'8. \mf a16( b8-.) c-. |
     cs-. d-. ds-. e-. |
-    <df f>-> <d fs>-> \< <ef g>->
+    <df f>-> <d fs>-> \< <ef g>-> <e gs>-> |
+    <f a>-> <gf bf>-> <g b>-> <af c>-> \! | \bar "||" \break
+    r <a,, c e>-. \f \repeat unfold 3 { r <a c e>-. } |
+    r <g c e>-. r <g c e>-. |
+    <fs c' e>4---> r |
+    <e' g e'>8. \f c'16( g8-.) e-. |
+    <ef f>^( <b' d>-.) <ef, f>^( <b' d>-.) |
+    <e,! g c>-. r \grace fs'8^( <g, g'>-.) r | \bar "||" \key d \major \break
+    r \mp <a, d fs!>-. \repeat unfold 7 { r <a d fs>-. } |
+    s2 | \break
+    s2 * 3 | \bar "||" \key e \major
+    s2 * 4 | \bar "||" \break
+    R2 * 2 |
+    R2 |
+    R2 \fermata | \bar "||" \key g \major \break
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -150,6 +164,25 @@ KeyboardOneLH = \relative c {
     \number-five-setup
     \clef bass
     
+    a4 a a a |
+    a'16->( as b8 ~ b) a( b8.) a16( g8-.) e-. | 
+    <d, d'>2. <a a'>8-> q-> |
+    <d, d'>2. <a' a'>8-> q-> |
+    s1 |
+    e'4 fs g a8 a |
+    <d, d'>2. <a a'>8-> q-> |
+    <d, d'>2. <a' a'>8-> q-> |
+    d''4 \arpeggio bf \arpeggio a \arpeggio <d, a'> \arpeggio |
+    <bf f'>2 <a e'>4^( d,) |
+    <e b'> <fs d'> |
+    a2 a,4. r8 |
+    d4-. a'-. |
+    d-. a-. |
+    d,-. r | 
+    R2 | \key f \major
+    \repeat unfold 8 { <f c'>4-. }
+    \repeat unfold 8 { <f, c' f>4-- }
+    \repeat unfold 8 { <f' c'>4-. }
     
 }
 
