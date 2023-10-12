@@ -3,15 +3,47 @@
 %---------%
 
 PatchA = ^\markup {
-    \translate #'(-15 . 0)
+    \translate #'(-5 . 0)
     \override #'(box-padding . 0.5)
     \box
-    \override #'(line-width . 50)
+    \override #'(line-width . 1)
     \wordwrap {
-        "Steinway Grand (Ivory,"
-        \bold \underline "full range)"
-        "with" "Cello Section (Logic,"
-        \bold \underline "D1 and lower only)"
+        \concat {
+            "Tango Accordion (Logic, "
+            \bold \underline "sounding UP 8va"
+            ") with"
+        }
+        "Harp (sample)"
+    }
+}
+
+PatchB = ^\markup {
+    \translate #'(-5 . 5)
+    \override #'(box-padding . 0.5)
+    \box
+    \override #'(line-width . 1)
+    \wordwrap {
+        \concat {
+            "Calliope (FM8, custom, "
+            \bold \underline "sounding UP 8va"
+            ") with"
+        }
+        \concat {
+            "Before Talkies (Logic, "
+            \bold \underline "vol.DOWN by -8.0"
+            ")"
+        }
+    }
+}
+
+PatchC = ^\markup {
+    \translate #'(-5 . 0)
+    \override #'(box-padding . 0.5)
+    \box
+    \override #'(line-width . 1)
+    \wordwrap {
+        "Steinway Grand (Ivory) with"
+        "Polka Accordion (Logic)"
     }
 }
 
@@ -19,12 +51,12 @@ PatchA = ^\markup {
 % Line Spanners %
 %---------------%
 
-CrescMolto = {
-    \once \override TextSpanner.staff-padding = #2.5
+CrescPoco = {
+    \once \override TextSpanner.staff-padding = #5
     \once \override TextSpanner.bound-details.left.padding = #-3
-    \once \override TextSpanner.bound-details.right.padding = #-4
+    \once \override TextSpanner.bound-details.right.padding = #2
     \once \override TextSpanner.bound-details.left.text = \markup {
-        \small \italic "cresc. molto"
+        \small \italic "cresc. poco  a poco"
     }
 }
 
@@ -37,15 +69,27 @@ mpa = _\markup {
     \dynamic "mp"
 }
 
+mpDlg = _\markup \translate #'(-1.5 . -5) {
+    \dynamic "mp"
+    \small \italic "- under dialog"
+}
+
 %------------%
 % Techniques %
 %------------%
 
-ralla = ^\markup {
-    \translate #'(0 . 3)
+MoltoRallA = ^\markup {
+    \translate #'(-2 . 3)
     \bold 
     \italic 
-    "rall."
+    "molto rall."
+}
+
+PocoRitA = ^\markup {
+    \translate #'(-1 . 3.5)
+    \bold 
+    \italic 
+    "poco rit."
 }
 
 %-------%
