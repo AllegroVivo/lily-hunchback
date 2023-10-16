@@ -9,10 +9,10 @@
 KeyboardOneRH = \relative c' {
     \number-two-setup
     
-    r4 \PatchA \ff <d f>-- <bf a'>-- <c g'>-- |
+    r4 \PatchA \tweak Y-offset #-5 \ff <d f>-- <bf a'>-- <c g'>-- |
     r <c e>-- <a g'>-- <bf f'>-- |
     r <d f>-- <bf a'>-- <c g'>-- |
-    <e c'> <f a> <d f bf d>2 | \break
+    <e c'>-- <f a>-- <d f bf d>2-- | \break
     
     << {
          b'4\rest <d f> <bf a'> <c g'> |
@@ -35,11 +35,11 @@ KeyboardOneRH = \relative c' {
     >>  
     
     \bar "||" \time 3/4 \break
-    <d' d'>2.-> ~ \f | 
-    q ~ \> |
+    <d' d'>2.-> ~ \tweak Y-offset #-4 \f | 
+    q ~ \tweak Y-offset #-4 \> |
     q ~ |
     q \break
-    r4 \PatchB \mp <f, a>-. q-. |
+    r4 \PatchB \tweak Y-offset #-5 \mp <f, a>-. q-. |
     \repeat unfold 3 { r4 <f a>-. q-. } | \bar "||" \break
     r4 <a, f'>2 |
     r4 <g c>2 |
@@ -83,23 +83,19 @@ KeyboardOneRH = \relative c' {
     >>
     
     <a, cs> | \break
-    \once \override DynamicText.extra-offset = #'(0 . -2.5)
-    r4 \mp <f' d'>( <d a'>) |
+    r4 \tweak Y-offset #-5 \mp <f' d'>( <d a'>) |
     <e c'>2( <c bf'>4) |
     r4 <c a'>( <a f>) |
     <df f bf>2. |
-    \override DynamicLineSpanner.staff-padding = #'4.5
-    <a f'>4^( <f d'> \cresc <a f'>) |
+    <a f'>4^( <f d'> \tweak Y-offset #-5.5 \cresc <a f'>) |
     <d a'>^( <a f'> <d a'>) | \break
     <f cs'>^( <cs a'> <f cs'>) |
     <a f'>( <f d'> <a f'>) \! |
-    \once \override DynamicText.extra-offset = #'(0 . -1)
-    <f, c' d>2. \mf |
+    <f, c' d>2. \tweak Y-offset #-6 \mf |
     <a c a'> |
     <g c g'> |
     <e c' e> | \break
-    \override DynamicLineSpanner.staff-padding = #'3.5
-    s4. s \dim |
+    s4. s \tweak Y-offset #-4.5 \dim |
     
     <<
         {
@@ -115,8 +111,7 @@ KeyboardOneRH = \relative c' {
         }
     >>  \bar "||" \break
     
-    \once \override DynamicText.extra-offset = #'(0 . 1.5) 
-    s2. \PatchC \mp |
+    s2. \PatchC \tweak Y-offset #-5 \mp |
     \repeat unfold 3 { s } | \break
     \repeat unfold 4 { s } | \break
     \repeat unfold 4 { s } | \break
@@ -129,17 +124,15 @@ KeyboardOneRH = \relative c' {
     <a c> |
     <g a> ~ |
     q | \bar "||" \break
-    \once \override DynamicText.extra-offset = #'(0 . 0)
-    R2. \p |
-    \repeat unfold 3 { R } | \break
+    << { \tweak Y-offset #0 R2.} \\ { s4 \tweak Y-offset #-5 \p s2 } >> |
+    \repeat unfold 3 { R2. } | \break
     c2. ~ |
     c |
     <g d'> ~ |
     q | \break
     R2. * 4 | \break
     R2. * 8 | \break
-    \once \override DynamicText.extra-offset = #'(0 . 0)
-    s2. \PatchD \p
+    s2. \PatchD \tweak Y-offset #-5 \p
     \repeat unfold 3 { s } | \break
     R2. * 4 | \bar "||" \break
 }
@@ -228,7 +221,7 @@ KeyboardOneLH = \relative c {
     <g, d' g>2. |
     <bf f' bf> |
     <c g' c> |
-    <a e a'> |
+    <a e' a> |
     <<
         { <d' a' d>2. ~ | q ~ | q ~ | q | }
         \\
@@ -298,14 +291,14 @@ KeyboardOneLH = \relative c {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 KeyboardOneNumberTwo = \new PianoStaff <<
-    \new Staff = "rh" \with { \consists "Span_arpeggio_engraver" } {
+    \new Staff = "rh" {
         \KeyboardOneRH
     }
-    \new Staff = "lh" \with { \consists "Span_arpeggio_engraver" } {
+    \new Staff = "lh" {
         \KeyboardOneLH
     }
 >>
 
-% \score {
-%     \KeyboardOneNumberTwo
-% }
+\score {
+    \KeyboardOneNumberTwo
+}

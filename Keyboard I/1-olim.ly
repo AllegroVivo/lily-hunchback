@@ -47,6 +47,6 @@ KeyboardOneNumberOne = \new PianoStaff <<
     }
 >>
 
-% \score {
-%     \KeyboardOneNumberOne
-% }
+\score {
+    \KeyboardOneNumberOne
+}

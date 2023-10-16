@@ -14,17 +14,17 @@ PatchA = ^\markup {
 }
 
 PatchB = ^\markup {
-    \translate #'(-4 . 6)
+    \translate #'(-1 . 2)
     \override #'(box-padding . 0.5)
     \box
-    "Harp (sample)"
+    "Steinway Grand (Ivory)"
 }
 
 PatchC = ^\markup {
     \translate #'(-2 . 2)
     \override #'(box-padding . 0.5)
     \box
-    "Dulcimer (Kontakt/Bolder - wood stick)"
+    "Harp (sample)"
 }
 
 %---------------%

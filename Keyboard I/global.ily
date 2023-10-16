@@ -12,9 +12,8 @@ global = {
     \override Score.BarLine.break-visibility = #'#(#t #t #t)
     \override Score.NonMusicalPaperColumn.line-break-system-details 
         = #'((alignment-distances . (14)))
-    \override DynamicText.extra-offset = #'(0 . -3)
-    \override Hairpin.extra-offset = #'(0 . -1.5)
     \override Staff.BarLine.allow-span-bar = ##t
+    \override DynamicText.Y-offset = #-5
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

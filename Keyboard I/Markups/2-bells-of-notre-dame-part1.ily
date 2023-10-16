@@ -52,7 +52,11 @@ PatchD = ^\markup {
 % Dynamics %
 %----------%
 
-subp = _\markup { \dynamic "p" \small \bold \italic "sub." }
+subp = _\markup \translate #'(-1 . -5) {
+    \dynamic "p" 
+    \small \bold \italic 
+    "sub."
+}
 
 pA = _\markup { \translate #'(0 . 2)\dynamic "p" }
 mpA = _\markup { \translate #'(0 . 2)\dynamic "mp" }

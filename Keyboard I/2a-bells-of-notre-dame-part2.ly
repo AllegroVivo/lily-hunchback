@@ -8,44 +8,42 @@
 
 KeyboardOneRH = \relative c'' {
     \number-two-a-setup
-    \override Staff.BarLine.allow-span-bar = ##t
     
-    \repeatBarGroupAlter #"[" #8 #-6 \bar ".|:"
+    \repeatBarGroupAlter #"[" #9 #-7 \bar ".|:"
     \repeat volta 2 {
         r4 \PatchA \p <f a>-. q-. | 
         r <f a>-. q-. |
-        \repeatBarGroupAlter #"]" #8 #-6
+        \repeatBarGroupAlter #"]" #9 #-7
     }
     \repeat unfold 2 { r <f a>-. q-. | }
-    \once \override DynamicLineSpanner.Y-offset = #-5
-    r \cresc <d f a>-. q-. |
+    r \PatchB \tweak Y-offset #-4 \cresc <d f a>-. q-. |
     r <d f a>-. q-. |
     r <a d f a>->-. q->-. \! |
-    q->-. \f q->-. q->-. | \bar "||" \break
-    <f d'>8^( \mf <d a'> <f d'>4 <d a'>) |
+    q->-. \tweak Y-offset #-5 \f q->-. q->-. | \bar "||" \break
+    <f d'>8^( \tweak Y-offset #-5 \mf <d a'> <f d'>4 <d a'>) |
     <e c'>^( <c g'>8 <e c'> <c g'>4) |
     <f c'>8^( <c a'> <f c'>4 <c a'>) |
     <f df'>4^( <df bf'>8 <f df'> <df bf'>4) |
     <d! a'>8^( <a f'> <d a'>4 <a f'>) |
     <cs g'>^( <a f'>8 <cs g'> <a e'>4) | \break
-    s2. \tweak extra-offset #'(0 . 0) \f |
+    s2. \tweak Y-offset #-4 \f |
     s |
-    <f' d'>8^( \mf <d a'> <f d'>4 <d a'>) |
+    <f' d'>8^( \tweak Y-offset #-5 \mf <d a'> <f d'>4 <d a'>) |
     <e c'>^( <c g'>8 <e c'> <c g'>4) |
     <f c'>8^( <c a'> <f c'>4 <c a'>) |
     <f df'>^( <df bf'>8 <f df'> <df bf'>4) | \break
     <c a'>8^( <a f'> <c a'>4 <a f'>) |
     <e' a>4^( <bf g'>8 <e a> <bf g'>4) |
-    r4 \f <a f'>8-> <c g'>-> <f a>4-> |
+    r4 \tweak Y-offset #-5 \f <a f'>8-> <c g'>-> <f a>4-> |
     <g c>-> r r| \break
-    <d bf>4^( \mf <bf g'> <d bf>) |
+    <d bf>4^( \tweak Y-offset #-5 \mf <bf g'> <d bf>) |
     <e c'>^( <c a'> <e c'>) |
     <f d'>^( <c a'> <f d'>) |
     <a e'>^( <d f> <e a>) | \break
-    r4 \mp <d bf'>^( <bf g'> |
+    r4 \tweak Y-offset #-4 \mp <d bf'>^( <bf g'> |
     <g e'> <e c'> <c g'>) |
     <a~ d e~>2. |
-    <a cs e>2 \< r4 | \break
+    <a cs e>2 \tweak Y-offset #-5 \< r4 | \break
     s2. \! \repeat unfold 3 { s2. } | \break
     \repeat unfold 4 { s2. } | \break
     <f c' d>2. |
@@ -55,7 +53,7 @@ KeyboardOneRH = \relative c'' {
     <d d'> | \time 4/4
     R1 | \break
     << 
-        { f''4 \arpeggio a \arpeggio g \arpeggio f \arpeggio | 
+        { f''4 \PatchC \arpeggio a \arpeggio g \arpeggio f \arpeggio | 
           \time 2/4 e \arpeggio c \arpeggio | \bar "||" }
         \\
         { <bf d>4 \arpeggio <a d> \arpeggio <g c> \arpeggio <bf d> \arpeggio |
@@ -75,7 +73,7 @@ KeyboardOneRH = \relative c'' {
     R2. * 2 | \break
     R2. * 4 | \bar "||" \break
     R2. |
-    a'4 \PatchC \p a a |
+    a'4 \p a a |
     a2. |
     a4 a a | \break
     a2. |
@@ -96,7 +94,7 @@ KeyboardOneLH = \relative c {
     a'2 r4 |
     b2. |
     cs |
-    <d, d'> \RallA |
+    <d, d'> \tweak Y-offset #3 \RallA |
     <a a'> |
     <b, b'>-> |
     <cs cs'>-> |
@@ -167,10 +165,10 @@ KeyboardOneLH = \relative c {
           d ~ |
           d ~ |
           d ~ |
-          d4 d8-> d-> d4-> |
+          d4 \override Stem.details.beamed-lengths = #'(4.5) d8-> d-> d4-> |
         }
     >>
-    <g, d' g>2. \PocoRitA |
+    <g, d' g>2. \tweak Y-offset #4 \PocoRitA |
     <bf f' bf> |
     <c g' c> |
     <a e' a> |
