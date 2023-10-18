@@ -55,7 +55,7 @@ KeyboardOneRH = \relative c' {
     <f af f'> ~ |
     q ~ |
     q) \stopTextSpan |
-    <ef bf' ef> ~ \p |
+    <ef bf' ef> ~ \tweak Y-offset #-6.5 \p |
     q ~ |
     q ~ |
     q | \bar "||" \break
@@ -192,6 +192,6 @@ KeyboardOneNumberTwoB = \new PianoStaff <<
     }
 >>
 
-% \score {
-%     \KeyboardOneNumberTwoB
-% }
+\score {
+    \KeyboardOneNumberTwoB
+}

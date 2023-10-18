@@ -14,6 +14,10 @@ global = {
         = #'((alignment-distances . (14)))
     \override Staff.BarLine.allow-span-bar = ##t
     \override DynamicText.Y-offset = #-5
+    \override Hairpin.Y-offset = #-4
+    \override DynamicTextSpanner.Y-offset = #-5.5
+    % TODO: Tweak this maybe? Might need to override on a case by case basis tho
+    %\override Stem.details.beamed-lengths = #'(3.5) 
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -120,6 +124,14 @@ number-seven-setup = {
     \global
     \time 3/4
     \key d \major
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+number-eight-setup = {
+    \global
+    \time 2/4
+    \key ef \major
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -27,6 +27,13 @@ PatchC = ^\markup {
     "Harp (sample)"
 }
 
+PatchD = ^\markup {
+    \translate #'(-2 . 2)
+    \override #'(box-padding . 0.5)
+    \box
+    "Dulcimer (Kontakt/Bolder - wood stick)"
+}
+
 %---------------%
 % Line Spanners %
 %---------------%

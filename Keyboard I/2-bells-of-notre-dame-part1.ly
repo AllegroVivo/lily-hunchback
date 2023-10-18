@@ -9,7 +9,7 @@
 KeyboardOneRH = \relative c' {
     \number-two-setup
     
-    r4 \PatchA \tweak Y-offset #-5 \ff <d f>-- <bf a'>-- <c g'>-- |
+    r4 \PatchA \ff <d f>-- <bf a'>-- <c g'>-- |
     r <c e>-- <a g'>-- <bf f'>-- |
     r <d f>-- <bf a'>-- <c g'>-- |
     <e c'>-- <f a>-- <d f bf d>2-- | \break
@@ -35,11 +35,11 @@ KeyboardOneRH = \relative c' {
     >>  
     
     \bar "||" \time 3/4 \break
-    <d' d'>2.-> ~ \tweak Y-offset #-4 \f | 
-    q ~ \tweak Y-offset #-4 \> |
+    <d' d'>2.-> ~ \f | 
+    q ~ \> |
     q ~ |
     q \break
-    r4 \PatchB \tweak Y-offset #-5 \mp <f, a>-. q-. |
+    r4 \PatchB \mp <f, a>-. q-. |
     \repeat unfold 3 { r4 <f a>-. q-. } | \bar "||" \break
     r4 <a, f'>2 |
     r4 <g c>2 |
@@ -83,11 +83,11 @@ KeyboardOneRH = \relative c' {
     >>
     
     <a, cs> | \break
-    r4 \tweak Y-offset #-5 \mp <f' d'>( <d a'>) |
+    r4 \mp <f' d'>( <d a'>) |
     <e c'>2( <c bf'>4) |
     r4 <c a'>( <a f>) |
     <df f bf>2. |
-    <a f'>4^( <f d'> \tweak Y-offset #-5.5 \cresc <a f'>) |
+    <a f'>4^( <f d'> \cresc <a f'>) |
     <d a'>^( <a f'> <d a'>) | \break
     <f cs'>^( <cs a'> <f cs'>) |
     <a f'>( <f d'> <a f'>) \! |
@@ -111,7 +111,7 @@ KeyboardOneRH = \relative c' {
         }
     >>  \bar "||" \break
     
-    s2. \PatchC \tweak Y-offset #-5 \mp |
+    s2. \PatchC \mp |
     \repeat unfold 3 { s } | \break
     \repeat unfold 4 { s } | \break
     \repeat unfold 4 { s } | \break
@@ -132,7 +132,7 @@ KeyboardOneRH = \relative c' {
     q | \break
     R2. * 4 | \break
     R2. * 8 | \break
-    s2. \PatchD \tweak Y-offset #-5 \p
+    s2. \PatchD \p
     \repeat unfold 3 { s } | \break
     R2. * 4 | \bar "||" \break
 }

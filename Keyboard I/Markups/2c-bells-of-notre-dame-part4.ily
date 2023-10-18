@@ -34,7 +34,7 @@ PatchB = ^\markup {
 
 sim = ^\markup { \translate #'(-3 . 2) \small \italic "sim." }
 
-RitA = ^\markup { \translate #'(0 . 3) \small \bold \italic "rit." }
+RitA = ^\markup { \translate #'(0 . 4) \small \bold \italic "rit." }
 PocoRitA = ^\markup { \translate #'(0 . 2) \small \bold \italic "poco rit." }
 
 %-------%

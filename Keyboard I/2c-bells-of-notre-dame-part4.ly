@@ -11,14 +11,12 @@ KeyboardOneRH = \relative c'' {
     
     R2. | \time 4/4
     R1 |
-    \override DynamicText.extra-offset = #'(1 . -0.5)
-    <bf d f>4 \arpeggio \PatchA \mp <a d a'> \arpeggio 
+    <bf d f>4 \arpeggio \PatchA \tweak X-offset #0 \mp <a d a'> \arpeggio 
     <g c g'> \arpeggio <bf d f> \arpeggio | \time 2/4
     <a c e> \arpeggio <e a c> \arpeggio | \time 3/4 \break
     R2. | \time 4/4
     R1 |
-    <bf' d f>4 \arpeggio \mp <a d a'> \arpeggio 
-    \override DynamicText.extra-offset = #'(0 . -2)
+    <bf' d f>4 \arpeggio \tweak X-offset #0 \mp <a d a'> \arpeggio 
     <g c g'> \arpeggio <bf d f> \arpeggio | \time 2/4
     <a c e> \arpeggio <e a c> \arpeggio | \bar "||" \time 4/4 \break
     <d d'>2. ~ \p q4 \fermata |
@@ -29,11 +27,9 @@ KeyboardOneRH = \relative c'' {
     d |
     R |
     a'8( e' a,[ e] a, e') | \break
-    \once \override DynamicLineSpanner.Y-offset = #-7
     <a, d a'>2. ~ \cresc |
     q |
     <a' d>8^( d, <a' d>[ d,] <a' d> d,) |
-    \override DynamicText.extra-offset = #'(0 . -2.5)
     <a' e'>8^( e <a e'>[ e] \! <a e'>4) \f | \bar "||" \break
     r \mp <f d'>8^( <d a'> <f d'>4--) |
     r e8^( <c g'> <e c'>4--) |
@@ -59,12 +55,10 @@ KeyboardOneRH = \relative c'' {
     <c g'>^( <g e'> <e c'>) |
     r <c' a'>^( <a f'>) |
     <df bf'>^( <bf f'>2) | \break
-    \override DynamicLineSpanner.staff-padding = #2
-    \override DynamicText.extra-offset = #'(0 . -0.5)
-    s4 s2 \cresc |
+    s4 s2 \tweak Y-offset #-3 \cresc |
     s2.* 2 |
-    s2 s8 \! s \f | \break
-    <f c' d>2. \mf |
+    s2 s8 \! s \tweak Y-offset #-3.5 \f | \break
+    <f c' d>2. \tweak Y-offset #-6 \mf |
     <a c a'> |
     <g c g'> |
     <e c' e> |
@@ -73,8 +67,7 @@ KeyboardOneRH = \relative c'' {
         { d' ~ | d | } 
         \\ 
         { 
-            \override DynamicLineSpanner.Y-offset = #-6.5
-            s4 s8 \dim s s4 | s2 s8 s8 \! | 
+            s4 s8 \tweak Y-offset #-5 \dim s s4 | s2 s8 s8 \! | 
         } 
     >> \bar "||" \break
     
