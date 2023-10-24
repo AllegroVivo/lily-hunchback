@@ -135,3 +135,35 @@ number-eight-setup = {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+number-eight-a-setup = {
+    \global
+    \time 4/4
+    \key d \major
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+number-nine-setup = {
+    \global
+    \time 4/4
+    \key d \major
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+number-nine-a-setup = {
+    \global
+    \time 3/4
+    \key gf \major
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+number-ten-setup = {
+    \global
+    \time 4/4
+    \key ef \major
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

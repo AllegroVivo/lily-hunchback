@@ -3,15 +3,50 @@
 %---------%
 
 PatchA = ^\markup {
-    \translate #'(-15 . 0)
+    \translate #'(-5 . 5)
     \override #'(box-padding . 0.5)
     \box
-    \override #'(line-width . 50)
+    \override #'(line-width . 1)
     \wordwrap {
-        "Steinway Grand (Ivory,"
-        \bold \underline "full range)"
-        "with" "Cello Section (Logic,"
-        \bold \underline "D1 and lower only)"
+        \concat {
+            "Calliope (FM8, custom,"
+            \bold \underline "sounding UP 8va"
+            ") with"
+        }
+        \concat {
+            "Before Talkies (Logic, "
+            \bold \underline "vol.DOWN by -8.0"
+            ")"
+        }
+    }
+}
+
+PatchB = ^\markup {
+    \translate #'(-8 . 4)
+    \override #'(box-padding . 0.5)
+    \box
+    \override #'(line-width . 1)
+    \wordwrap {
+        \concat {
+            "Ethereal MAS (Massive, custom, "
+            \bold \underline "A3 and higher only, sounding UP 15va"
+            ") with"
+        }
+        \concat {
+            "Steinway Grand (Ivory, "
+            \bold \underline "full range"
+            ") with"
+        }
+        \concat {
+            "Blue Carpet (Logic, "
+            \bold \underline "full range, vol.DOWN by -14.0"
+            ") with"
+        }
+        \concat {
+            "Soft EP (FM8, "
+            \bold \underline "full range"
+            ")"
+        }
     }
 }
 
@@ -19,34 +54,13 @@ PatchA = ^\markup {
 % Line Spanners %
 %---------------%
 
-CrescMolto = {
-    \once \override TextSpanner.staff-padding = #2.5
-    \once \override TextSpanner.bound-details.left.padding = #-3
-    \once \override TextSpanner.bound-details.right.padding = #-4
-    \once \override TextSpanner.bound-details.left.text = \markup {
-        \small \italic "cresc. molto"
-    }
-}
-
 %----------%
 % Dynamics %
 %----------%
 
-mpa = _\markup {
-    \translate #'(0 . -2)
-    \dynamic "mp"
-}
-
 %------------%
 % Techniques %
 %------------%
-
-ralla = ^\markup {
-    \translate #'(0 . 3)
-    \bold 
-    \italic 
-    "rall."
-}
 
 %-------%
 % Other %
