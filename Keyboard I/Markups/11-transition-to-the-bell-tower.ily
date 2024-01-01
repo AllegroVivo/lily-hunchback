@@ -8,17 +8,8 @@ PatchA = ^\markup {
     \box
     \override #'(line-width . 1)
     \wordwrap {
-        "Harp (sample) with"
-        \concat {
-            "Stage Piano Mk I Chorus (Logic, "
-            \bold \underline "vol.DOWN by -6.5"
-            ") with"
-        }
-        \concat {
-            "Blue Carpet (Logic, "
-            \bold \underline "vol.DOWN by -13.5"
-            ")"
-        }
+        "Steinway Grand (Ivory) with"
+        "Tine Out (FM8, custom)"
     }
 }
 
