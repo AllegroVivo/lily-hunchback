@@ -183,3 +183,29 @@ number-twelve-setup = {
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+number-twelvea-setup = {
+    \global
+    \time 6/4
+    \key gf \major
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+number-thirteen-setup = {
+    \global
+    \time 4/4
+    \key c \major
+    \override TupletBracket.bracket-visibility = #'if-no-beam
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+number-fourteen-setup = {
+    \global
+    \time 4/4
+    \key f \major
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
